@@ -9,7 +9,6 @@
 
 [node name="Board" type="Node2D" parent="."]
 position = Vector2( 92, 52 )
-script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -34,6 +33,10 @@ patch_margin_bottom = 8
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Controller" type="Node2D" parent="Board"]
+script = ExtResource( 1 )
+initialFenStr = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR"
 
 [node name="Board Labels" type="Node2D" parent="."]
 position = Vector2( 92, 52 )
@@ -264,9 +267,9 @@ __meta__ = {
 }
 
 [node name="h" type="Label" parent="Board Labels/Files"]
-margin_left = 121.0
+margin_left = 117.0
 margin_top = -21.0
-margin_right = 127.0
+margin_right = 123.0
 margin_bottom = -10.0
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 0.960784, 1, 0.909804, 1 )

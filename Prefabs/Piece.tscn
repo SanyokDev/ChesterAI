@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Scripts/Pieces/PieceObject.cs" type="Script" id=1]
+[ext_resource path="res://Scripts/Pieces/PieceObj.cs" type="Script" id=1]
 [ext_resource path="res://Sprites/PieceTex.tres" type="Texture" id=2]
 
 [node name="Piece" type="Node2D"]
@@ -10,6 +10,6 @@ __meta__ = {
 "_editor_description_": ""
 }
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="PieceIcon" type="Sprite" parent="."]
 texture = ExtResource( 2 )
 offset = Vector2( 0, -12 )
