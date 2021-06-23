@@ -5,7 +5,7 @@ public class Board : Node2D {
     //Variables
     public PieceData[,] board = new PieceData[8, 8];
     private PackedScene piecePrefab = ResourceLoader.Load<PackedScene>("res://Prefabs/Piece.tscn");
-    private Vector2 offset = new Vector2(104, 68);
+    private Vector2 offset = new Vector2(12, 16);
     
     public void PlacePiece(int _x, int _y, PieceType _type, PieceColor _color) {
         board[_x, _y] = new PieceData(_type, _color);
