@@ -11,6 +11,24 @@ public class Board : Node2D {
         board[_x, _y] = new PieceData(_type, _color);
     }
 
+
+    private Vector2 topLeft = new Vector2(96, 56);
+    private Vector2 topRight = new Vector2(224, 56);
+    private Vector2 bottomLeft = new Vector2(96, 184);
+    private Vector2 bottomRight = new Vector2(96, 184);
+
+    public override void _Input(InputEvent @event) {
+        // Mouse in viewport coordinates.
+        if (@event is InputEventMouseButton eventMouseButton)
+            GD.Print("Mouse Click/Unclick at: ", eventMouseButton.Position);
+        else if (@event is InputEventMouseMotion eventMouseMotion)
+            GD.Print("Mouse Motion at: ", eventMouseMotion.Position);
+
+        // Print the size of the viewport.
+        GD.Print("Viewport Resolution is: ", GetViewportRect().Size);
+        
+    }
+    
     //Start
     public override void _Ready() {
         for (int x = 0; x < board.GetLength(0); x++) {
